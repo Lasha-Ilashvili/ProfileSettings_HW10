@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="24dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="16dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivSettingsDarkModeIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:adjustViewBounds="true"
+        tools:background="@color/black"
+        tools:srcCompat="@drawable/ic_logout" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSettingsLogoutText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|center_vertical"
+        android:layout_marginStart="46dp"
+        android:fontFamily="@font/urbanist_medium"
+        android:textColor="@color/red"
+        android:textSize="16sp"
+        tools:background="@color/black"
+        tools:text="Logout" />
+
+</FrameLayout>

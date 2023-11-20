@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/darkModeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="24dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="16dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivSettingsDarkModeIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:adjustViewBounds="true"
+        tools:background="@color/black"
+        tools:srcCompat="@drawable/ic_eye_dark_mode" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSettingsDarkModeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|center_vertical"
+        android:layout_marginStart="46dp"
+        android:fontFamily="@font/urbanist_medium"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        tools:background="@color/black"
+        tools:text="Dark Mode" />
+
+    <Switch
+        android:id="@+id/switchDarkMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center_vertical"
+        android:checked="true"
+        android:thumbTint="@color/white"
+        android:trackTint="@android:color/background_dark" />
+
+</FrameLayout>

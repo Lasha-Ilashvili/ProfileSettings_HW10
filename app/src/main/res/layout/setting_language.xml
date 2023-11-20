@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="24dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="16dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivSettingsLanguageIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:adjustViewBounds="true"
+        tools:background="@color/black"
+        tools:srcCompat="@drawable/ic_language_dots" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSettingsLanguageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|center_vertical"
+        android:layout_marginStart="46dp"
+        android:fontFamily="@font/urbanist_medium"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        tools:background="@color/black"
+        tools:text="Language" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSettingsChooseLanguageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginEnd="46dp"
+        android:fontFamily="@font/urbanist_medium"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        tools:background="@color/black"
+        tools:text="English (US)" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivSettingsArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:adjustViewBounds="true"
+        tools:background="@color/black"
+        tools:srcCompat="@drawable/ic_arrow" />
+
+</FrameLayout>
