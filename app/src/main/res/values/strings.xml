@@ -1,6 +1,4 @@
 <resources>
     <string name="app_name">ProfileSettings_HW10</string>
-    <string name="off">OFF</string>
-    <string name="on">ON</string>
     <string name="title_profile">Profile</string>
 </resources>

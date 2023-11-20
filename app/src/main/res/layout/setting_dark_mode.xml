@@ -35,6 +35,6 @@
         android:layout_gravity="end|center_vertical"
         android:checked="true"
         android:thumbTint="@color/white"
-        android:trackTint="@android:color/background_dark" />
+        android:trackTint="@android:color/darker_gray" />
 
 </FrameLayout>

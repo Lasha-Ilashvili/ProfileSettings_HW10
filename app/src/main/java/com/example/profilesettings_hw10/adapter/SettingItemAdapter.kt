@@ -45,6 +45,22 @@ class SettingItemAdapter() :
             )
         )
 
+        DARK_MODE_SETTING -> SettingDarkModeViewHolder(
+            SettingDarkModeBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent,
+                false
+            )
+        )
+
+        LOGOUT_SETTING -> SettingLogoutViewHolder(
+            SettingLogoutBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent,
+                false
+            )
+        )
+
         else -> SettingItemViewHolder(
             SettingItemBinding.inflate(
                 LayoutInflater.from(parent.context),
@@ -102,7 +118,7 @@ class SettingItemAdapter() :
             with(binding) {
                 ivSettingsLanguageIcon.setImageResource(setting.settingIcon)
                 tvSettingsLanguageText.text = setting.settingText1
-                tvSettingsChooseLanguageText.text = setting.settingText1
+                tvSettingsChooseLanguageText.text = setting.settingText2
                 ivSettingsArrow.setImageResource(setting.settingArrow)
             }
         }
@@ -117,7 +133,6 @@ class SettingItemAdapter() :
             with(binding) {
                 ivSettingsDarkModeIcon.setImageResource(setting.settingIcon)
                 tvSettingsDarkModeText.text = setting.settingText1
-                /* Add switch */
             }
         }
     }
