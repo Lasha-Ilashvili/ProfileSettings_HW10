@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="24dp"
@@ -12,8 +13,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="start"
         android:adjustViewBounds="true"
-        tools:background="@color/black"
-        tools:srcCompat="@drawable/ic_language_dots" />
+        app:srcCompat="@drawable/ic_language_dots"
+        tools:background="@color/black" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvSettingsLanguageText"
@@ -22,10 +23,10 @@
         android:layout_gravity="start|center_vertical"
         android:layout_marginStart="46dp"
         android:fontFamily="@font/urbanist_medium"
+        android:text="Language"
         android:textColor="@color/white"
         android:textSize="16sp"
-        tools:background="@color/black"
-        tools:text="Language" />
+        tools:background="@color/black" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvSettingsChooseLanguageText"
@@ -34,10 +35,10 @@
         android:layout_gravity="end|center_vertical"
         android:layout_marginEnd="46dp"
         android:fontFamily="@font/urbanist_medium"
+        android:text="English (US)"
         android:textColor="@color/white"
         android:textSize="16sp"
-        tools:background="@color/black"
-        tools:text="English (US)" />
+        tools:background="@color/black" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivSettingsArrow"
@@ -46,6 +47,6 @@
         android:layout_gravity="end"
         android:adjustViewBounds="true"
         tools:background="@color/black"
-        tools:srcCompat="@drawable/ic_arrow" />
+        app:srcCompat="@drawable/ic_arrow" />
 
 </FrameLayout>

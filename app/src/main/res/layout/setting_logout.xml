@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="24dp"
@@ -12,8 +13,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="start"
         android:adjustViewBounds="true"
-        tools:background="@color/black"
-        tools:srcCompat="@drawable/ic_logout" />
+        app:srcCompat="@drawable/ic_logout"
+        tools:background="@color/black" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvSettingsLogoutText"
@@ -22,9 +23,9 @@
         android:layout_gravity="start|center_vertical"
         android:layout_marginStart="46dp"
         android:fontFamily="@font/urbanist_medium"
+        android:text="Logout"
         android:textColor="@color/red"
         android:textSize="16sp"
-        tools:background="@color/black"
-        tools:text="Logout" />
+        tools:background="@color/black" />
 
 </FrameLayout>

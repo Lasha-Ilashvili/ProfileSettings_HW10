@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="24dp"
@@ -12,8 +13,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="start"
         android:adjustViewBounds="true"
-        tools:background="@color/black"
-        tools:srcCompat="@drawable/ic_profile" />
+        app:srcCompat="@drawable/ic_profile"
+        tools:background="@color/black" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvSettingsText"
@@ -22,10 +23,10 @@
         android:layout_gravity="start|center_vertical"
         android:layout_marginStart="46dp"
         android:fontFamily="@font/urbanist_medium"
+        android:text="Edit Profile"
         android:textColor="@color/white"
         android:textSize="16sp"
-        tools:background="@color/black"
-        tools:text="Edit Profile" />
+        tools:background="@color/black" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivSettingsArrow"
@@ -33,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end"
         android:adjustViewBounds="true"
-        tools:background="@color/black"
-        tools:srcCompat="@drawable/ic_arrow" />
+        app:srcCompat="@drawable/ic_arrow"
+        tools:background="@color/black" />
 
 </FrameLayout>

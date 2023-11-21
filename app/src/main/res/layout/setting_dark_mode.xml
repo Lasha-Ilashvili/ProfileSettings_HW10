@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/darkModeLayout"
     android:layout_width="match_parent"
@@ -13,8 +14,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="start"
         android:adjustViewBounds="true"
-        tools:background="@color/black"
-        tools:srcCompat="@drawable/ic_eye_dark_mode" />
+        app:srcCompat="@drawable/ic_eye_dark_mode"
+        tools:background="@color/black" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvSettingsDarkModeText"
@@ -23,10 +24,10 @@
         android:layout_gravity="start|center_vertical"
         android:layout_marginStart="46dp"
         android:fontFamily="@font/urbanist_medium"
+        android:text="Dark Mode"
         android:textColor="@color/white"
         android:textSize="16sp"
-        tools:background="@color/black"
-        tools:text="Dark Mode" />
+        tools:background="@color/black" />
 
     <Switch
         android:id="@+id/switchDarkMode"

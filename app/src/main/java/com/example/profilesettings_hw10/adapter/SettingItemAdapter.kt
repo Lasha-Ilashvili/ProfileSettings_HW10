@@ -13,8 +13,7 @@ import com.example.profilesettings_hw10.model.Setting
 import com.example.profilesettings_hw10.model.SettingType
 
 class SettingItemAdapter() :
-    ListAdapter<Setting, RecyclerView.ViewHolder>(object :
-        DiffUtil.ItemCallback<Setting>() {
+    ListAdapter<Setting, RecyclerView.ViewHolder>(object : DiffUtil.ItemCallback<Setting>() {
 
         override fun areItemsTheSame(oldItem: Setting, newItem: Setting): Boolean {
             TODO("Not yet implemented")
@@ -25,7 +24,7 @@ class SettingItemAdapter() :
         }
     }) {
 
-    companion object {
+    private companion object {
         const val NORMAL_SETTING = 1
         const val LANGUAGE_SETTING = 2
         const val DARK_MODE_SETTING = 3
@@ -39,33 +38,25 @@ class SettingItemAdapter() :
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = when (viewType) {
         LANGUAGE_SETTING -> SettingLanguageViewHolder(
             SettingLanguageBinding.inflate(
-                LayoutInflater.from(parent.context),
-                parent,
-                false
+                LayoutInflater.from(parent.context), parent, false
             )
         )
 
         DARK_MODE_SETTING -> SettingDarkModeViewHolder(
             SettingDarkModeBinding.inflate(
-                LayoutInflater.from(parent.context),
-                parent,
-                false
+                LayoutInflater.from(parent.context), parent, false
             )
         )
 
         LOGOUT_SETTING -> SettingLogoutViewHolder(
             SettingLogoutBinding.inflate(
-                LayoutInflater.from(parent.context),
-                parent,
-                false
+                LayoutInflater.from(parent.context), parent, false
             )
         )
 
         else -> SettingItemViewHolder(
             SettingItemBinding.inflate(
-                LayoutInflater.from(parent.context),
-                parent,
-                false
+                LayoutInflater.from(parent.context), parent, false
             )
         )
     }
@@ -74,16 +65,8 @@ class SettingItemAdapter() :
     override fun getItemCount() = currentList.size
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        when (holder) {
-            is SettingItemViewHolder -> holder.bind()
-
-
-            is SettingLanguageViewHolder -> holder.bind()
-
-
-            is SettingDarkModeViewHolder -> holder.bind()
-
-            is SettingLogoutViewHolder -> holder.bind()
+        if (holder is SettingItemViewHolder) {
+            holder.bind()
         }
     }
 
@@ -110,43 +93,11 @@ class SettingItemAdapter() :
     }
 
     inner class SettingLanguageViewHolder(private val binding: SettingLanguageBinding) :
-        RecyclerView.ViewHolder(binding.root) {
-
-        fun bind() {
-            val setting = currentList[adapterPosition]
-
-            with(binding) {
-                ivSettingsLanguageIcon.setImageResource(setting.settingIcon)
-                tvSettingsLanguageText.text = setting.settingText1
-                tvSettingsChooseLanguageText.text = setting.settingText2
-                ivSettingsArrow.setImageResource(setting.settingArrow)
-            }
-        }
-    }
+        RecyclerView.ViewHolder(binding.root)
 
     inner class SettingDarkModeViewHolder(private val binding: SettingDarkModeBinding) :
-        RecyclerView.ViewHolder(binding.root) {
-
-        fun bind() {
-            val setting = currentList[adapterPosition]
-
-            with(binding) {
-                ivSettingsDarkModeIcon.setImageResource(setting.settingIcon)
-                tvSettingsDarkModeText.text = setting.settingText1
-            }
-        }
-    }
+        RecyclerView.ViewHolder(binding.root)
 
     inner class SettingLogoutViewHolder(private val binding: SettingLogoutBinding) :
-        RecyclerView.ViewHolder(binding.root) {
-
-        fun bind() {
-            val setting = currentList[adapterPosition]
-
-            with(binding) {
-                ivSettingsDarkModeIcon.setImageResource(setting.settingIcon)
-                tvSettingsLogoutText.text = setting.settingText1
-            }
-        }
-    }
+        RecyclerView.ViewHolder(binding.root)
 }
