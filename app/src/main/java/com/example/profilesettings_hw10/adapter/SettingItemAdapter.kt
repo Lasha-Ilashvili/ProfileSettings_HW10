@@ -22,6 +22,7 @@ class SettingItemAdapter() :
         override fun areContentsTheSame(oldItem: Setting, newItem: Setting): Boolean {
             TODO("Not yet implemented")
         }
+
     }) {
 
     private companion object {
@@ -33,6 +34,14 @@ class SettingItemAdapter() :
 
     fun setData(settings: List<Setting>) {
         submitList(settings)
+    }
+
+    override fun getItemViewType(position: Int) = when (currentList[position].settingType) {
+        SettingType.LANGUAGE -> LANGUAGE_SETTING
+        SettingType.DARK_MODE -> DARK_MODE_SETTING
+        SettingType.LOGOUT -> LOGOUT_SETTING
+
+        else -> NORMAL_SETTING
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = when (viewType) {
@@ -48,7 +57,9 @@ class SettingItemAdapter() :
             )
         )
 
-        LOGOUT_SETTING -> SettingLogoutViewHolder(
+        LOGOUT_SETTING
+
+        -> SettingLogoutViewHolder(
             SettingLogoutBinding.inflate(
                 LayoutInflater.from(parent.context), parent, false
             )
@@ -61,21 +72,10 @@ class SettingItemAdapter() :
         )
     }
 
-
-    override fun getItemCount() = currentList.size
-
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         if (holder is SettingItemViewHolder) {
             holder.bind()
         }
-    }
-
-    override fun getItemViewType(position: Int) = when (currentList[position].settingType) {
-        SettingType.LANGUAGE -> LANGUAGE_SETTING
-        SettingType.DARK_MODE -> DARK_MODE_SETTING
-        SettingType.LOGOUT -> LOGOUT_SETTING
-
-        else -> NORMAL_SETTING
     }
 
     inner class SettingItemViewHolder(private val binding: SettingItemBinding) :
