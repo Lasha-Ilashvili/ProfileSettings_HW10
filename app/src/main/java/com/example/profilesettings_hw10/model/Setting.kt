@@ -5,7 +5,7 @@ import com.example.profilesettings_hw10.R.drawable.ic_profile
 
 data class Setting(
     val settingIcon: Int = ic_profile,
-    val settingText1: String = "",
+    val settingText: String = "Edit Profile",
     val settingArrow: Int = ic_arrow,
     val settingType: SettingType = SettingType.NORMAL
 )

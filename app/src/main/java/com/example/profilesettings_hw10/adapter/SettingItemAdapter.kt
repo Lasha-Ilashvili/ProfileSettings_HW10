@@ -86,7 +86,7 @@ class SettingItemAdapter() :
 
             with(binding) {
                 ivSettingsIcon.setImageResource(setting.settingIcon)
-                tvSettingsText.text = setting.settingText1
+                tvSettingsText.text = setting.settingText
                 ivSettingsArrow.setImageResource(setting.settingArrow)
             }
         }
